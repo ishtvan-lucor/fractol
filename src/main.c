@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 17:31:06 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/09/26 21:25:03 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/09/29 19:35:09 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	error_usage(void)
 void	check_fract(char *cur_fract)
 {
 	if (!ft_strcmp(cur_fract, MB))
-		initilization(MB);
+		init_start(MB);
 	else if (!ft_strcmp(cur_fract, J))
-		initilization(J);
+		init_start(J);
 	else
 		error_usage();
 }

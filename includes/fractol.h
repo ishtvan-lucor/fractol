@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 17:25:03 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/09/26 21:24:58 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/09/29 19:34:39 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FRACTOL_L
 # define WIN_WIDTH 1300
 # define WIN_HEIGHT 900
-# define BORDER_W 200
 # define MB "mandelbrot"
 # define J "julia"
 # include <math.h>
@@ -30,10 +29,9 @@ typedef struct	s_store
 	int			bpp;
 	int			sl;
 	int			e;
-	int			img_w;
 }				t_store;
 
 int				main(int argc, char **argv);
-void			initilization(char *fract_name);
+void			init_start(char *fract_name);
 
 #endif
