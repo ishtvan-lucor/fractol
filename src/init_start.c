@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_start.c                                    :+:      :+:    :+:   */
+/*   init_start.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/26 20:51:18 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/09/30 07:06:26 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/09/30 19:36:37 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
-#include <stdio.h>
 
 int		exit_x(t_store *s)
 {
@@ -20,7 +19,7 @@ int		exit_x(t_store *s)
 	return (0);
 }
 
-int catch_hooks(int key, t_store *s)
+int		catch_hooks(int key, t_store *s)
 {
 	s = NULL;
 	if (key == 53)
@@ -30,6 +29,8 @@ int catch_hooks(int key, t_store *s)
 
 void	start_loop(t_store *s)
 {
+	mlx_mouse_hook(s->win, zoom, s);
+	mlx_hook(s->win, 6, 1L << 6, move_julia, s);
 	mlx_hook(s->win, 2, 5, catch_hooks, s);
 	mlx_hook(s->win, 17, 1L << 17, exit_x, s);
 	mlx_loop(s->mlx);

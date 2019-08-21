@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/25 17:31:06 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/09/30 00:19:18 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/09/30 18:53:40 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	error_usage(void)
 	ft_putstr("Incorrect input! Usage:\n");
 	ft_putstr("./fractol mandelbrot\n");
 	ft_putstr("./fractol julia\n");
+	ft_putstr("./bsh\n");
 }
 
 void	check_fract(char *cur_fract)
@@ -25,6 +26,8 @@ void	check_fract(char *cur_fract)
 		init_start(MB);
 	else if (!ft_strcmp(cur_fract, J))
 		init_start(J);
+	else if (!ft_strcmp(cur_fract, B))
+		init_start(B);
 	else
 		error_usage();
 }

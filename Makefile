@@ -6,7 +6,7 @@
 #    By: azaporoz <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/11 15:27:53 by azaporoz          #+#    #+#              #
-#    Updated: 2018/09/30 06:15:09 by ikoloshy         ###   ########.fr        #
+#    Updated: 2018/09/30 18:22:51 by ikoloshy         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -18,6 +18,8 @@ SRC = src/main.c \
 	  src/set_data.c \
 	  src/make_fract.c \
 	  src/fractals.c \
+	  src/zoom.c \
+	  src/move_julia.c \
 
 HDR = includes/fractol.h
 OFL = $(SRC:.c=.o)
